@@ -1,0 +1,28 @@
+{{ range (where .Paginator.Pages "Type" "posts") }}
+    <article class="post">
+        <div class="post-cover">
+            <a class="lozad" href="{{ .Permalink }}" title="{{ .Title }}" data-background-image="{{ .Params.cover }}"></a>
+        </div>
+        <div class="post-header">
+            <div class="post-meta">
+                <a href="{{ .Params.authorLink }}">
+                    <strong>{{ .Params.author }}</strong>
+                </a>
+                <em>·</em>{{ .Date.Format .Site.Params.date_format }}
+            </div>
+            <a class="post-title" href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+            <div class="post-meta">
+                <a href="/tags"><i class="fa fa-tags"></i></a>
+                {{ with .Params.Tags }}
+                    {{ range . }}
+                        <em>·</em>
+                        <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        <div class="post-desc">
+           {{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}...
+        </div>
+    </article>
+{{ end }}

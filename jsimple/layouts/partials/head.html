@@ -1,0 +1,18 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="author" content="{{ $.Site.Params.author }}">
+    <link rel="stylesheet" href="/css/SimpleStyle.css">
+    <link rel="stylesheet" href="/css/loading.css">
+    <link rel="stylesheet" href="/css/xiaomai.css">
+    <link rel="stylesheet" href="/css/share.min.css">
+    <link rel="stylesheet" href="/css/zoom.css">
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/iconfont/iconfont.css">
+    <link rel="icon" href="{{ $.Site.Params.favicon}}">
+    <meta name="keywords" content="{{ if .IsHome }}{{ $.Site.Params.keywords }}{{ else }}{{ .Params.keywords }}{{ end }}">
+    <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+</head>
