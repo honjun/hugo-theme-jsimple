@@ -5,7 +5,16 @@
 			  {{- partial "left_menu.html" . -}}
 			  {{- partial "user_entry.html" . -}}
         <div id="wrapper" class="clearfix">
-        {{- block "main" . }}{{- end }}
+           <div id="body">
+             <div id="main" class="main">
+              {{- partial "page_title" . -}}
+           		{{- block "main" . }}{{- end }}
+           		<div class="fixed-btn">
+           		    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+           		</div>
+              {{- partial "footer" . -}}
+           	</div>
+           </div>
         </div>
     <script>
         $(function () {
@@ -25,9 +34,9 @@
             document.body.addEventListener('input', POWERMODE);
     
             //为超链接加上target='_blank'属性  
-            $('a[href^="http"]').each(function() {  
-                $(this).attr('target', '_blank');  
-            });
+            // $('a[href^="http"]').each(function() {  
+            //     $(this).attr('target', '_blank');  
+            // });
     
             // window.onblur = function (){ 
             //     document.title = '快回来学习~'; 

@@ -3005,7 +3005,7 @@ body
 }
 .page-title
 {
-    background-color: #fff;height:45px;position:fixed;z-index:100;border-width:2px;box-sizing:border-box;border-bottom:2px solid #d9d9d9;
+    background-color: #fff;height:45px;position:fixed;top:0;z-index:100;border-width:2px;box-sizing:border-box;border-bottom:2px solid #d9d9d9;
 }
 .page-title ul
 {

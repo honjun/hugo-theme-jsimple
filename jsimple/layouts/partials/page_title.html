@@ -2,7 +2,7 @@
     <ul>
         {{ range .Site.Params.topMenu }}
             <li >
-              <a target="{{ .target }}" href="{{ .link | absURL }}">{{ .name }}</a>
+              <a href="{{ .link | absURL }}">{{ .name }}</a>
             </li>
         {{ end }}
         {{- partial "search_bar.html" . -}}
