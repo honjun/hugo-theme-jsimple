@@ -2,17 +2,4 @@
     {{- partial "article_list" . -}}
 </div>
 <!-- 分页开始 -->
-<div id="btn-pager">
-    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-        {{ if .Paginator.HasPrev }}
-            <a class="extend prev" rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
-                « {{ with .Site.Data.l10n.pagination.previous }}{{ . }}{{ end }}
-            </a>
-        {{ end }}
-        {{ if .Paginator.HasNext }}
-            <a class="extend next" rel="next" href="{{ .Paginator.Next.URL | absURL }}">
-                {{ with .Site.Data.l10n.pagination.next }}{{ . }}{{ end }} »{{.Paginator.TotalPages}}{{.Paginator.PageNumber}}
-            </a>
-        {{ end }}
-    {{ end }}
-</div>
+{{- partial "paginator" . -}}

@@ -1,0 +1,31 @@
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 }}
+<div id="btn-pager">
+    {{ if $pag.HasPrev }}
+        <a class="page-number" href="{{ $pag.Prev.URL }}">上一页</a>
+    {{ end }}
+    {{ $ellipsed := false }}
+    {{ $shouldEllipse := false }}
+    {{ range $pag.Pagers }}
+        {{ $right := sub .TotalPages .PageNumber }}
+        {{ $showNumber := or (le .PageNumber 3) (eq $right 0) }}
+        {{ $showNumber := or $showNumber (and (gt .PageNumber (sub $pag.PageNumber 2)) (lt .PageNumber (add $pag.PageNumber 2)))  }}
+        {{ if $showNumber }}
+            {{ $ellipsed = false }}
+            {{ $shouldEllipse = false }}
+        {{ else }}
+            {{ $shouldEllipse = not $ellipsed }}
+            {{ $ellipsed = true }}
+        {{ end }}
+        {{ if $showNumber }}
+          <a class="page-number {{ if eq . $pag }}current{{ end }}" href="{{ .URL }}">{{ .PageNumber }}</a>
+        {{ else if $shouldEllipse }}
+          <span class="space">&nbsp;&hellip;&nbsp;</span>
+        {{ end }}
+    {{ end }}
+    {{ if $pag.HasNext }}
+        <a class="page-number" href="{{ $pag.Next.URL }}">下一页</a>
+    {{ end }}
+</div>
+{{ end }}
+
