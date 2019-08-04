@@ -1,26 +1,18 @@
 {{ define "main" }}
-<div id="single" class="page terms" style="min-height: 697px;">
-    <div id="top" style="display: block;">
-        <a class="icon-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="set">
-                        <ul class="category-list">
-                            {{ $data := .Data }} {{ range $key, $value := .Data.Terms.ByCount }}
-                            <li class="category-list-item">
-                                <a style="text-decoration:none" class="category-list-link" href="{{ $value.Name | urlize }}">
-                                {{ $value.Name }}</a>
-                                <span class="category-list-count">{{ $value.Count }}</span>
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-            </div>
+{{- partial "middle_cover" . -}}
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://www.hojun.cn">
+        <div class="post-header">
+            <h3 class="post-title">总的来说 - 目前共计{{ len .Data.Terms.ByCount }}类标签</h3>
         </div>
-    </div>
+        <p><img width="100%" src="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8b6mnyj30go0cumzs.jpg" alt="tags-bg"></p> 
+        <div class="post-content markdown-body" itemprop="articleBody">
+            <ul class="tag-list">
+                {{ range $key, $value := .Data.Terms.ByCount }}
+                <li><a href="{{ $value.Name | urlize }}">{{ $value.Name }}({{ $value.Count }})</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </article>
 </div>
 {{ end }}
