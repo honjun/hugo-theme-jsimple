@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{- partial "middle_cover" . -}}
+<div class="main-inner">
+  <div id="single" class="page">
+      <div id="top">
+          <a class="icon-icon" href="javascript:history.back()"></a>
+      </div>
+      <div class="section">
+          <div class="article">
+              <div class="post-header">
+                  <div class="post-author clearfix">
+                      <a class="avatar fleft" href="{{ .Params.authorLink }}" target="_blank">
+                          <img width="48" src="{{ .Site.Params.avatar }}" alt="avatar">
+                      </a>
+                      <p><span class="label">作者</span>
+                          <span>{{ .Params.author }}</span>
+                          <span>{{ .Date.Format .Site.Params.date_format }}</span>
+                      </p>
+                      <p>{{ .Params.authorDesc }}</p>
+                  </div>
+                  <h2 class="post-title">{{ .Title }}</h2>
+                  <div class="post-meta">
+                      本文总共{{ .Content | countwords  }}个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+                  </div>
+              </div>
+              <div class="content post-content markdown-body">
+                  {{ .Content }}
+              </div>
+          </div>
+      </div>
+  </div>
+{{- partial "comments.html" . -}}
+</div>
+{{ end }}
