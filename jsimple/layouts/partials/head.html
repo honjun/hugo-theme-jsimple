@@ -14,5 +14,5 @@
     <link rel="icon" href="{{ $.Site.Params.favicon}}">
     <meta name="keywords" content="{{ if .IsHome }}{{ $.Site.Params.keywords }}{{ else }}{{ .Params.keywords }}{{ end }}">
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}·{{ .Site.Params.siteName }}{{ else }}{{ .Title }} &middot; {{ .Site.Params.siteName }}{{ end }}</title>
 </head>

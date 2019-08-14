@@ -1,0 +1,124 @@
+baseurl = "https://diaspora.hojun.cn"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+title = "好少年光芒万丈"
+theme = "jsimple"
+themesDir = "./themes/"
+
+# Define the number of posts per page
+paginate = 10
+
+disablePathToLower = true
+summaryLength = 50
+
+[params.iconshow]
+    category = true
+    series = false
+    tag = true
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
+[params]
+    # Tell me who you are
+		author = "hojun"
+		keywords = "hojunkey"
+		description = "hojundesc"
+		shortName = "HJ"
+    siteName = "hojun"
+    
+    # 左侧面板配置
+    avatar = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg"
+    coverTitle = "hello ，stranger"
+    coverDescription = "一个好奇的博客"
+    
+    weixin = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftan8chgw0j302s02s3yh.jpg"
+    sinaWb = "https://weibo.com/5673857615/profile?topnav=1&wvr=6&is_all=1"
+    qq = "https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes"
+    github = "https://github.com/honjun"
+    bili = "https://space.bilibili.com/271849279/#/"
+    
+    
+		favicon = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg"
+    bio = "Blogger - Programmer - Gopher"
+    location = "Earth"
+    site_description = "hojun的hugo静态博客"
+    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
+    # Enter your email address to display your Gravatar icon in the profile. If not set the theme
+    # will fallback to the avatar.
+    gravatar = "you@example.com"
+    logo = "css/images/logo.png"
+    disable_mathjax = false # set to true to disable MathJax
+
+    # define which types of pages should be shown. By default the type with the most regular pages
+    mainSections = ["posts"]
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    # Add custom assets with their paths relative to the static folder
+    custom_css = []
+    custom_js  = []
+    
+    # 评论配置
+    v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz"
+    v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ"
+    
+# Create custom menu entries by defining a label and a link for
+# them. Since you can also link posts, you've the option the
+# place the links before or after them.
+#
+# E.g.: "Home" appears before all linked posts in the menu
+# and "Tags" / "Categories" after them.
+[[params.menu]]
+    name   = "About"
+    link   = "/about/"
+    target = "_blank"
+[[params.menu]]
+    name   = "Links"
+    link   = "/links/"
+    target = ""
+[[params.menu]]
+    name   = "Archives"
+    link   = "/archives/"
+    target = ""
+[[params.menu]]
+    name   = "Categories"
+    link   = "/categories/"
+    target = ""
+[[params.menu]]
+    name   = "Tags"
+    link   = "/tags/"
+    target = ""
+    
+[[params.topMenu]]
+    name   = "首页"
+    link   = "/"
+    target = ""
+    
+    
+# 头部栏目配置
+[[params.topMenu]]
+    name   = "技术"
+    link   = "/categories/技术/"
+    target = ""
+[[params.topMenu]]
+    name   = "生活"
+    link   = "/categories/生活/"
+    target = ""
+[[params.topMenu]]
+    name   = "友链"
+    link   = "/links/"
+    target = ""
+    
+
+
+    
+
+[social]
+# TODO
