@@ -21,8 +21,8 @@
             SimpleCore.init({
                 buildingTime: '<%= theme.siteBuildingTime %>',
                 current: $('.post-tags').length > 0 ? 'post' : 'archive',
-                customImg: 'https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftpw8983bjj308c08c77h.jpg',
-                tipImg: 'https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg',
+                customImg: '{{ .Site.Params.tipImg }}',
+                tipImg: '{{ .Site.Params.tipImg }}',
             });
             const observer = lozad();
             observer.observe();

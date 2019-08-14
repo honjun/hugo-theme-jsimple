@@ -1,4 +1,4 @@
-baseurl = "https://diaspora.hojun.cn"
+baseurl = "https://example.com"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 title = "好少年光芒万丈"
@@ -26,11 +26,10 @@ summaryLength = 50
 
 [params]
     # Tell me who you are
-		author = "hojun"
+    siteName = "hojun"
 		keywords = "hojunkey"
 		description = "hojundesc"
 		shortName = "HJ"
-    siteName = "hojun"
     
     # 左侧面板配置
     avatar = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftand2qurdj303c03cdfv.jpg"
@@ -42,19 +41,8 @@ summaryLength = 50
     qq = "https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes"
     github = "https://github.com/honjun"
     bili = "https://space.bilibili.com/271849279/#/"
-    
-    
 		favicon = "https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvgy1ftoufg1c8fj300g00g3yb.jpg"
-    bio = "Blogger - Programmer - Gopher"
-    location = "Earth"
-    site_description = "hojun的hugo静态博客"
-    copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
-    # Enter your email address to display your Gravatar icon in the profile. If not set the theme
-    # will fallback to the avatar.
-    gravatar = "you@example.com"
-    logo = "css/images/logo.png"
-    disable_mathjax = false # set to true to disable MathJax
-
+    
     # define which types of pages should be shown. By default the type with the most regular pages
     mainSections = ["posts"]
 
@@ -69,40 +57,25 @@ summaryLength = 50
     v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz"
     v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ"
     
+    # 文章底部配置
+    tipImg="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanSQ.jpg"
+    QQGroup="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g22ie1sr2jj306m06ywef.jpg"
+    weixinG="https://cdn.jsdelivr.net/gh/honjun/ImageHosting/sina/006bYVyvly1g1ksxfx94qj309k09k3yg.jpg"
+    
+    # 熊掌号
+    baiduXZ="http://author.baidu.com/home/1594654793276567"
 # Create custom menu entries by defining a label and a link for
 # them. Since you can also link posts, you've the option the
 # place the links before or after them.
 #
 # E.g.: "Home" appears before all linked posts in the menu
 # and "Tags" / "Categories" after them.
-[[params.menu]]
-    name   = "About"
-    link   = "/about/"
-    target = "_blank"
-[[params.menu]]
-    name   = "Links"
-    link   = "/links/"
-    target = ""
-[[params.menu]]
-    name   = "Archives"
-    link   = "/archives/"
-    target = ""
-[[params.menu]]
-    name   = "Categories"
-    link   = "/categories/"
-    target = ""
-[[params.menu]]
-    name   = "Tags"
-    link   = "/tags/"
-    target = ""
-    
+# 头部栏目配置
+
 [[params.topMenu]]
     name   = "首页"
     link   = "/"
     target = ""
-    
-    
-# 头部栏目配置
 [[params.topMenu]]
     name   = "技术"
     link   = "/categories/技术/"
@@ -115,10 +88,4 @@ summaryLength = 50
     name   = "友链"
     link   = "/links/"
     target = ""
-    
-
-
-    
-
-[social]
-# TODO
+   
